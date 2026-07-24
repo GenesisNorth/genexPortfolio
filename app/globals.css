@@ -247,14 +247,16 @@ header {
 }
 
 .window-header {
-  background: var(--accent-retro);
-  color: var(--bg-color);
-  padding: 5px 15px;
+  position: relative;
+  background: linear-gradient(180deg, #2b2b2b 0%, #1d1d1d 100%);
+  color: var(--text-secondary);
+  padding: 9px 14px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
+  font-family: "Space Mono", monospace;
   margin-bottom: 4px;
 }
 
@@ -931,5 +933,331 @@ footer {
 
   .footer-logo h2 {
     font-size: 1.5rem;
+  }
+}
+
+/* ============================================================
+   macOS Terminal windows (About / Experience / Contact / Skills)
+   ============================================================ */
+
+.mac-window {
+  border: 2px solid var(--accent-retro);
+  background: rgb(0, 0, 0);
+  box-shadow: var(--retro-shadow);
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+
+/* Offset anchored sections so the sticky header doesn't cover their title bars */
+.mac-window,
+section[id],
+#work {
+  scroll-margin-top: 90px;
+}
+
+.mac-titlebar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: linear-gradient(180deg, #2b2b2b 0%, #1d1d1d 100%);
+  border-bottom: 2px solid var(--accent-retro);
+}
+
+.mac-dots {
+  display: flex;
+  gap: 8px;
+  z-index: 1;
+}
+
+.mac-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.35);
+}
+
+.mac-dot-red {
+  background: #ff5f56;
+}
+.mac-dot-yellow {
+  background: #ffbd2e;
+}
+.mac-dot-green {
+  background: #27c93f;
+}
+
+.mac-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Space Mono", monospace;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.mac-body {
+  padding: 26px 30px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* --- terminal line grammar --- */
+.term-line {
+  display: block;
+  margin: 14px 0 6px;
+  word-break: break-word;
+}
+.term-line:first-child {
+  margin-top: 0;
+}
+.term-arrow {
+  color: var(--accent-retro);
+  font-weight: 700;
+}
+.term-path {
+  color: #56b6c2;
+}
+.term-cmd {
+  color: #e6e6e6;
+}
+.term-out {
+  color: var(--text-secondary);
+  margin: 0 0 6px;
+  max-width: 70ch;
+}
+.term-strong {
+  color: #e6e6e6;
+}
+.term-accent {
+  color: var(--accent-retro);
+}
+.term-muted {
+  color: #6a6a6a;
+  font-size: 0.82rem;
+}
+
+.term-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 4px;
+}
+.term-tag {
+  border: 1px solid var(--accent-retro);
+  color: var(--accent-retro);
+  font-size: 0.7rem;
+  padding: 3px 9px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+/* --- experience list --- */
+.exp-list {
+  margin-top: 10px;
+}
+.exp-item {
+  padding: 18px 0 22px;
+  border-top: 1px solid var(--border-color);
+}
+.exp-item:first-child {
+  border-top: none;
+}
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 8px;
+}
+.exp-role {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e6e6e6;
+}
+.exp-at {
+  color: var(--text-secondary);
+}
+.exp-company {
+  color: var(--accent-retro);
+}
+.exp-dates {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+.exp-summary {
+  margin-bottom: 10px;
+}
+.exp-bullets {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.exp-bullets li {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+.exp-bullets li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent-retro);
+}
+.exp-link {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--accent-retro);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.exp-link:hover {
+  text-decoration: underline;
+}
+
+/* --- contact: json block + form --- */
+.term-json {
+  color: var(--text-secondary);
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  line-height: 1.9;
+  margin: 4px 0 10px;
+  white-space: pre-wrap;
+}
+.json-key {
+  color: #56b6c2;
+}
+.json-val {
+  color: var(--accent-retro);
+}
+.json-link {
+  color: var(--accent-retro);
+  text-decoration: none;
+}
+.json-link:hover {
+  text-decoration: underline;
+}
+
+.term-form {
+  margin-top: 14px;
+  max-width: 620px;
+}
+.term-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.term-field-block {
+  align-items: flex-start;
+}
+.term-field-label {
+  color: var(--accent-retro);
+  font-size: 0.85rem;
+  min-width: 92px;
+  padding-top: 8px;
+}
+.term-field input,
+.term-field textarea {
+  flex: 1;
+  background: rgba(0, 224, 90, 0.03);
+  border: 1px solid var(--border-color);
+  color: #e6e6e6;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.term-field textarea {
+  resize: vertical;
+}
+.term-field input::placeholder,
+.term-field textarea::placeholder {
+  color: #555;
+}
+.term-field input:focus,
+.term-field textarea:focus {
+  border-color: var(--accent-retro);
+}
+.term-submit {
+  margin-top: 6px;
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+}
+
+/* ============================================================
+   macOS traffic-light retrofit for existing window chrome
+   (hero portrait + project cards)
+   ============================================================ */
+.window-header > span:first-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.window-controls {
+  order: -1;
+  gap: 8px;
+}
+.window-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.35);
+}
+.window-btn > span {
+  display: none;
+}
+.window-controls .window-btn:nth-child(1) {
+  background: #ff5f56;
+}
+.window-controls .window-btn:nth-child(2) {
+  background: #ffbd2e;
+}
+.window-controls .window-btn:nth-child(3) {
+  background: #27c93f;
+}
+.window-btn:hover {
+  filter: brightness(1.15);
+}
+
+.mac-window .term-tags {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .mac-body {
+    padding: 20px 16px;
+    font-size: 0.82rem;
+  }
+  .mac-title {
+    font-size: 0.62rem;
+  }
+  .exp-head {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .term-field {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .term-field-label {
+    padding-top: 0;
   }
 }

@@ -3,6 +3,10 @@
 import { useEffect, useState } from "react"
 import { TerminalBoot } from "@/components/terminal-boot"
 import { Typed } from "@/components/typed"
+import { MacWindow } from "@/components/mac-window"
+import { AboutSection } from "@/components/about-section"
+import { ExperienceSection } from "@/components/experience-section"
+import { ContactSection } from "@/components/contact-section"
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -82,9 +86,9 @@ export default function Home() {
         <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div className="logo">System.Ref</div>
           <nav className="nav-links">
+            <a href="#about">ABOUT</a>
             <a href="#work">PROJECTS</a>
-            <a href="#lab">LAB</a>
-            <a href="#archive">ARCHIVE</a>
+            <a href="#experience">EXPERIENCE</a>
             <a href="#contact">CONTACT</a>
           </nav>
           <div className="system-status">SYS_UP: 24:12:05:08 | CPU: 12%</div>
@@ -149,13 +153,16 @@ export default function Home() {
           </div>
         </div>
 
+        {/* About */}
+        <AboutSection />
+
         {/* Portfolio */}
         <section id="work">
           <h2 className="section-title">Latest Deployments</h2>
           <div className="portfolio-grid">
             {/* Project 1 */}
             <div className="project-card">
-              <div className="window-header" style={{ background: "var(--accent-retro)", color: "var(--bg-color)" }}>
+              <div className="window-header">
                 <span>PROJECT_ALPHA</span>
                 <div className="window-controls">
                   <button className="window-btn" aria-label="Minimize">
@@ -185,7 +192,7 @@ export default function Home() {
             </div>
             {/* Project 2 */}
             <div className="project-card">
-              <div className="window-header" style={{ background: "var(--accent-retro)", color: "var(--bg-color)" }}>
+              <div className="window-header">
                 <span>PROJECT_BETA</span>
                 <div className="window-controls">
                   <button className="window-btn" aria-label="Minimize">
@@ -215,7 +222,7 @@ export default function Home() {
             </div>
             {/* Project 3 */}
             <div className="project-card">
-              <div className="window-header" style={{ background: "var(--accent-retro)", color: "var(--bg-color)" }}>
+              <div className="window-header">
                 <span>PROJECT_GAMMA</span>
                 <div className="window-controls">
                   <button className="window-btn" aria-label="Minimize">
@@ -245,6 +252,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Experience */}
+        <ExperienceSection />
       </div>
 
       {/* Marquee */}
@@ -262,9 +272,8 @@ export default function Home() {
       </div>
 
       <div className="container">
-        {/* Terminal Section */}
-        <section className="terminal-section" id="lab">
-          <div className="terminal-header">SYSTEM_CONSOLE.EXE</div>
+        {/* Skills terminal */}
+        <MacWindow id="lab" title="genesis@habila: ~/skills — -zsh">
           <TerminalBoot>
             <div className="terminal-row">
               <span className="prompt">{"guest@system:~$"}</span>
@@ -274,13 +283,19 @@ export default function Home() {
               <span className="output">{"> Analyzing core competencies..."}</span>
             </div>
             <div className="terminal-row">
-              <span className="output">{"[████████████████] 100% - FRONT-END ARCHITECTURE"}</span>
+              <span className="output">{"[███████████████░] 95% - REACT.JS"}</span>
             </div>
             <div className="terminal-row">
-              <span className="output">{"[████████████░░░░] 75% - INTERFACE DESIGN"}</span>
+              <span className="output">{"[██████████████░░] 90% - NODE.JS & EXPRESS"}</span>
             </div>
             <div className="terminal-row">
-              <span className="output">{"[██████████████░░] 85% - CREATIVE CODING"}</span>
+              <span className="output">{"[██████████████░░] 90% - FLUTTER & DART"}</span>
+            </div>
+            <div className="terminal-row">
+              <span className="output">{"[██████████████░░] 85% - SOLIDITY & SMART CONTRACTS"}</span>
+            </div>
+            <div className="terminal-row">
+              <span className="output">{"[█████████████░░░] 80% - AWS & DEVOPS"}</span>
             </div>
             <div className="terminal-row">
               <span className="prompt">{"guest@system:~$"}</span>
@@ -293,7 +308,10 @@ export default function Home() {
               </span>
             </div>
           </TerminalBoot>
-        </section>
+        </MacWindow>
+
+        {/* Contact */}
+        <ContactSection />
 
         {/* Footer */}
         <footer>

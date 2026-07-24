@@ -1,0 +1,281 @@
+# Portfolio Content — Genesis Habila
+
+> Canonical content extracted from the previous portfolio site (was running at `localhost:3001`).
+> This is the source of truth for real copy/data to swap into the new `System.Ref` site
+> (currently on `localhost:3002`), replacing its placeholder content.
+> Extracted 2026-07-23.
+
+---
+
+## 1. Identity & SEO
+
+| Field | Value |
+|---|---|
+| Name | **Genesis Habila** (also written "Habila Genesis") |
+| Role / Title | Software Engineer — AI & Blockchain |
+| Page `<title>` | `Habila Genesis \| Software Engineer - AI & Blockchain` |
+| Meta description | Professional portfolio of Habila Genesis — Software Engineer specializing in Blockchain, AI, and Full-Stack Development with 5+ years of experience |
+| Experience | 5+ years |
+
+---
+
+## 2. Hero
+
+- **Eyebrow / role:** Software Engineer
+- **Name (headline):** Genesis Habila
+- **Tagline:** Building innovative solutions with years of experience in decentralized systems, artificial intelligence, and scalable full-stack architectures.
+- **CTAs:** `Explore` · `Get In Touch`
+
+---
+
+## 3. About Me
+
+**Paragraph 1:**
+A Passionate and Innovative Software Engineer with years of extensive experience in developing high-end, Fullstack, Mobile, Blockchain and AI Solutions. Also, with keen attention to Technical Leadership, Project Management and Research.
+
+**Paragraph 2:**
+A Consistent Learner with fast adaptability skills, Problem Solving and Cross functional Team Collaboration. My research interests include Space Exploration/Astrophysics, AIOT & Embedded Systems, and Blockchain.
+
+**Focus areas (badges):** Technical Leadership · Project Management · AI & Blockchain · Research
+
+### Education
+- **B.Tech Statistics** — Federal University of Technology Minna, Niger State.
+
+### Research Interests
+- Space Exploration / Astrophysics
+- AIOT & Embedded Systems
+- AI/ML
+- Blockchain
+
+### Certifications
+- LinkedIn Learning
+- Udemy
+- Digital Nigeria
+
+### Volunteering
+- Fail Conference
+- Google Developers Group Abuja
+
+---
+
+## 4. Technical Skills (with proficiency %)
+
+### Frontend & Mobile
+| Skill | % |
+|---|---|
+| React.js | 95 |
+| Next.js | 90 |
+| Flutter & Dart | 90 |
+| React Native | 85 |
+| JavaScript | 95 |
+
+### Backend
+| Skill | % |
+|---|---|
+| Node.js & Express | 90 |
+| Python | 85 |
+| PHP & Laravel | 80 |
+| Rust | 75 |
+| REST API | 95 |
+
+### Database & Blockchain
+| Skill | % |
+|---|---|
+| Solidity | 85 |
+| MongoDB | 90 |
+| PostgreSQL & MySQL | 85 |
+| Firebase | 85 |
+| Smart Contracts | 80 |
+
+### Tools & Platforms
+| Skill | % |
+|---|---|
+| AWS | 80 |
+| Docker | 75 |
+| Git & GitHub | 95 |
+| Android Studio | 85 |
+| Figma | 80 |
+
+---
+
+## 5. Featured Projects
+
+Filter categories used on old site: **All · Web · Mobile · Blockchain · Fintech · E-commerce · Education**
+
+### Sana — *Web*
+Comprehensive platform connecting users with essential services and opportunities across Africa.
+- **Tags:** platform, services, africa, web
+- **Website:** https://sana.africa
+
+### TrashCoin — *Mobile / Blockchain* (Dart/Flutter)
+Revolutionary blockchain platform that transforms waste into digital currency. Built with Solana blockchain.
+- **Tags:** solana, blockchain, flutter, mobile
+- **Source:** https://github.com/GenesisNorth/trashcoin
+- **Website:** https://trashcoin.eu
+- **Play Store:** https://play.google.com/store/apps/details?id=eu.trashcoin
+
+### Spendify — *Web / Fintech*
+Smart financial management platform for tracking expenses, budgeting, and achieving financial goals.
+- **Tags:** finance, budgeting, fintech, web
+- **Website:** https://spendify.ca
+
+### Rida Natural — *Web / E-commerce*
+E-commerce platform dedicated to natural health and wellness products with a seamless shopping experience.
+- **Tags:** e-commerce, health, wellness, web
+- **Website:** https://ridanatural.com
+
+### NANS LMS — *Web / Education*
+Educational platform for student management, learning resources, and academic collaboration.
+- **Tags:** education, lms, learning, students
+- **Website:** https://nans-lms.ng
+
+### Africartz — *Mobile*
+Accommodation booking platform featuring a seamless mobile experience for travelers.
+- **Tags:** booking, travel, mobile, accommodation
+- **Source:** https://github.com/GenesisNorth/africartz
+- **Website:** https://www.africartz.com
+- **Play Store:** https://play.google.com/store/apps/details?id=com.africartz.bookings
+
+---
+
+## 6. Work Experience
+
+### Backend & AI Engineer — Niteon
+**06/2025 – Present** · https://niteonhq.com
+Leading backend development and AI integration for e-commerce solutions.
+- Fixed existing system bugs that improved user experience by 50%
+- Built an AI recommendation system for recommending products and conversational user interactions
+- Collaborated with cross-functional teams to integrate AI solutions into existing systems
+- Designed algorithms to optimize performance of artificial intelligence implementation
+- Optimized codebase for improved scalability and efficiency of automated processes
+- Ensured secure payment processing
+- **Tech:** AI/ML, Backend, Algorithms, Optimization
+
+### Blockchain & Mobile Engineer — TrashCoin
+**08/2024 – 04/2025** · https://trashcoin.eu
+Developing mobile applications for cryptocurrency transactions and wallet management.
+- Developed mobile application allowing for cryptocurrency transactions and wallet management
+- Integrated blockchain technology into mobile platforms for secure transactions
+- Built a custom token for transactions using Solana blockchain and Rust
+- Integrated third-party APIs into existing mobile products
+- Improved mobile application features to reduce latency and improve load times
+- Implemented user interface designs for seamless user experiences across devices
+- **Tech:** Solana, Rust, Flutter, Mobile, Blockchain
+
+### Fullstack & AI Engineer — Century Information Systems
+**01/2025 – 07/2025** · https://centuryinformationsystems.com
+Full-stack development with a focus on AI integration and performance optimization.
+- Modified existing application features and integrated AI for Text-to-Speech (TTS)
+- Redesigned and implemented new UI features
+- Implemented APIs to enhance the functionality of existing systems
+- Optimized frontend performance by implementing caching strategies such as Redis
+- **Tech:** React, AI/ML, Text-to-Speech, Redis, Frontend
+
+### Fullstack & Blockchain Engineer — SlantApp Technologies
+**11/2023 – 05/2025** · https://www.slantapp.com
+Building seamless mobile and web applications with advanced AI and blockchain features.
+- Created seamless mobile applications compatible with various platforms
+- Engineered web applications incorporating advanced AI features
+- Developed smart contracts using Solidity for a multi-level Reward System
+- Developed strategies to increase transaction throughputs by optimizing codebases
+- Participated in open source communities such as Polygon Guild and Arbitrum Stylus
+- **Tech:** Solidity, Smart Contracts, AI, Mobile, Web
+
+### Mobile Engineer — Africartz
+**11/2024 – 05/2025** · https://www.africartz.com
+Developing cross-platform mobile applications for e-commerce.
+- Developed the Africartz mobile application for cross-platform usage
+- Enhanced basic features and worked on UI improvements
+- Created a seamless user experience for the application
+- Conducted code reviews to ensure quality and adherence to best practices
+- Researched emerging technologies to continuously improve mobile application capabilities
+- **Tech:** Mobile, Cross-platform, UI/UX
+
+### Fullstack & Mobile Engineer — ELC Nigeria
+**03/2024 – 04/2025**
+Modernizing real estate applications and providing technical leadership.
+- Modernized codebases to improve functionality of real estate web and mobile applications
+- Coordinated testing and validation procedures through the software development lifecycle
+- Provided technical expertise to team members regarding mobile application design
+- Implemented new features that boosted user satisfaction by 20%
+- Conducted weekly research to enhance application credibility and value
+- **Tech:** Real Estate, Mobile, Web, Full-Stack
+
+### Mobile Engineer (Contract) — EdSqill
+**03/2024 – 12/2024** · https://edsqill.com
+Enhancing educational mobile platforms for better user engagement.
+- Enhanced functionality of mobile applications to improve user experience
+- Revamped existing user interface for better engagement
+- Resolved bugs and integrated new features for effective course learning
+- Optimized app performance to ensure faster load times and responsiveness
+- **Tech:** Flutter, Mobile, UI/UX, Education
+
+### Mobile Engineer (Contract) — Laundry DNA
+**04/2023 – 10/2023**
+Optimizing laundry service applications for efficiency and user experience.
+- Enhanced mobile applications by improving navigation and categorization, increasing functionality by 30%
+- Integrated third-party APIs to expand application functionality
+- Improved app security and features, resulting in a 20% increase in app usage
+- Reduced bug resolution time by 20%, ensuring timely fixes
+- Implemented new app features boosting app usage by over 20%
+- Resolved bugs in payment gateway to ensure seamless transactions
+- **Tech:** Flutter, Mobile, Payment Gateway, UI/UX
+
+### Fullstack & Mobile Engineer — INEC (Intern)
+**02/2022 – 07/2023** · https://inecnigeria.org
+Developing critical electoral systems for national democratic processes.
+- Developed Voter Enrollment Mobile Application, enhancing voter verification processes by 30%
+- Configured Bi-Modal Voters Registration System (BVAS) devices to ensure 100% election integrity
+- Conducted software testing on BVAS devices, resulting in over 50% increase in efficiency
+- Implemented custom Android OS for Continuous Voter Registration (CVR) achieving over 50% voter registration
+- **Tech:** Android, Python, Custom OS, BVAS, Government Systems
+
+### Blockchain Engineer — Nimedix Ecosystem
+**07/2022 – 12/2022**
+Developing decentralized healthcare solutions using NEAR Protocol.
+- Developed basic smart contracts using Rust programming language
+- Built applications with the NEAR Protocol blockchain
+- Acquired comprehensive knowledge about Blockchain Technology and Decentralized systems
+- Developed software solutions using agile methodologies for healthcare applications
+- Implemented testing protocols to ensure software quality and reliability
+- **Tech:** Rust, NEAR Protocol, Blockchain, Smart Contracts
+
+---
+
+## 7. Contact & Socials
+
+| Channel | Value | Link |
+|---|---|---|
+| Email | habilagenesis@gmail.com | mailto:habilagenesis@gmail.com |
+| Phone | (+234) 906 838 8713 | tel:+2349068388713 |
+| GitHub | github.com/GenesisNorth | https://github.com/GenesisNorth |
+| LinkedIn | linkedin.com/in/habilagenesis | https://linkedin.com/in/habilagenesis |
+
+- **Contact intro:** Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+- **Contact form fields:** Name*, Email*, Message* → `Send Message`
+- **Availability:** Open to Development opportunities
+
+---
+
+## 8. Mapping to the new (System.Ref) site
+
+Where each piece of content should land when replacing the new site's placeholders in `app/page.tsx`:
+
+| New site placeholder | Replace with |
+|---|---|
+| Logo `System.Ref` | `Genesis Habila` (or a chosen brand handle) |
+| Hero eyebrow `guest@system:~$ whoami` | keep, or `whoami` → answers with name below |
+| Hero `Creative Developer & Designer` | `Software Engineer — AI & Blockchain` |
+| Hero paragraph (brutalist minimalism…) | Hero tagline (§2) |
+| Stat: `08+ Years XP` | `5+` Years XP |
+| Stat: `124 Nodes Built` | e.g. real project count (`6` featured / more) |
+| Stat: `001 Global Rank` | e.g. `10+` roles/companies, or drop |
+| Stat: `42k Lines Written` | keep as flavor or replace with real metric |
+| Projects: Vaporwave / Cybernetic / Analog (3 cards) | Real projects §5 (Sana, TrashCoin, Spendify, Rida Natural, NANS LMS, Africartz) |
+| Project tags `#WEB_DESIGN` etc. | Real project tags §5 |
+| Terminal skills bars (FRONT-END / INTERFACE / CREATIVE) | Real top skills §4 (e.g. React.js 95, Node.js 90, Solidity 85) |
+| Footer social `TWITTER / GITHUB / LINKEDIN` | GitHub, LinkedIn, Email (§7) — no Twitter/X on record |
+| Footer `SYS_REF 2024©` | `GENESIS HABILA` / current year |
+| (new) Contact / Work Experience sections | Not present on new site yet — add if desired (§6, §7) |
+
+> **Note:** the new site currently has no *Work Experience*, *About/Education*, or *Contact form* sections. If you want the full old-site content represented, those sections need to be built into the new design.
