@@ -3,7 +3,8 @@
 > Canonical content extracted from the previous portfolio site (was running at `localhost:3001`).
 > This is the source of truth for real copy/data to swap into the new `System.Ref` site
 > (currently on `localhost:3002`), replacing its placeholder content.
-> Extracted 2026-07-23.
+> Extracted 2026-07-23. Reconciled with **Habila-Genesis CV.pdf** on 2026-07-24 (locations,
+> extra bullets, certifications detail, graduation year, practices & soft skills, references).
 
 ---
 
@@ -39,22 +40,33 @@ A Consistent Learner with fast adaptability skills, Problem Solving and Cross fu
 **Focus areas (badges):** Technical Leadership · Project Management · AI & Blockchain · Research
 
 ### Education
-- **B.Tech Statistics** — Federal University of Technology Minna, Niger State.
+- **B.Tech Statistics** — Federal University of Technology Minna, Niger State. **(2023)**
+
+### Practices
+- Fullstack Development
+- Mobile Application Development
+- Blockchain & AI Development
+- Technical Management
 
 ### Research Interests
 - Space Exploration / Astrophysics
 - AIOT & Embedded Systems
-- AI/ML
 - Blockchain
 
+### Soft Skills
+Adaptability · Problem Solving · Ideation · Research · Written and Verbal Communication · Effective Listening · Employee Relations · Team Building
+
 ### Certifications
-- LinkedIn Learning
-- Udemy
-- Digital Nigeria
+- **LinkedIn Learning** — Web Security, Databases, Full Stack Development, JavaScript Essentials
+- **Udemy** — Laravel, JavaScript
+- **Digital Nigeria & Microsoft** — Software Development Fundamentals, Networking Fundamentals
 
 ### Volunteering
-- Fail Conference
-- Google Developers Group Abuja
+- **Fail Conference** — coordinated with speakers for an event attended by 50+ developers (09/2022)
+- **Google Developers Group Abuja** — community-building strategies for events with 500+ attendees (09/2022)
+
+### References
+- Fiyin Lasisi — Manufacturing and Automation Engineer, Cummins, USA
 
 ---
 
@@ -141,7 +153,7 @@ Accommodation booking platform featuring a seamless mobile experience for travel
 ## 6. Work Experience
 
 ### Backend & AI Engineer — Niteon
-**06/2025 – Present** · https://niteonhq.com
+**06/2025 – Present** · Colorado, USA · https://niteonhq.com
 Leading backend development and AI integration for e-commerce solutions.
 - Fixed existing system bugs that improved user experience by 50%
 - Built an AI recommendation system for recommending products and conversational user interactions
@@ -152,18 +164,19 @@ Leading backend development and AI integration for e-commerce solutions.
 - **Tech:** AI/ML, Backend, Algorithms, Optimization
 
 ### Blockchain & Mobile Engineer — TrashCoin
-**08/2024 – 04/2025** · https://trashcoin.eu
+**08/2024 – 04/2025** · City of Dover, USA · https://trashcoin.eu
 Developing mobile applications for cryptocurrency transactions and wallet management.
 - Developed mobile application allowing for cryptocurrency transactions and wallet management
 - Integrated blockchain technology into mobile platforms for secure transactions
 - Built a custom token for transactions using Solana blockchain and Rust
 - Integrated third-party APIs into existing mobile products
+- Used bug-tracking software like JIRA to document defects found during testing
 - Improved mobile application features to reduce latency and improve load times
 - Implemented user interface designs for seamless user experiences across devices
 - **Tech:** Solana, Rust, Flutter, Mobile, Blockchain
 
 ### Fullstack & AI Engineer — Century Information Systems
-**01/2025 – 07/2025** · https://centuryinformationsystems.com
+**01/2025 – 07/2025** · Abuja, Nigeria · https://centuryinformationsystems.com
 Full-stack development with a focus on AI integration and performance optimization.
 - Modified existing application features and integrated AI for Text-to-Speech (TTS)
 - Redesigned and implemented new UI features
@@ -172,17 +185,19 @@ Full-stack development with a focus on AI integration and performance optimizati
 - **Tech:** React, AI/ML, Text-to-Speech, Redis, Frontend
 
 ### Fullstack & Blockchain Engineer — SlantApp Technologies
-**11/2023 – 05/2025** · https://www.slantapp.com
+**11/2023 – 05/2025** · Abuja, Nigeria · https://www.slantapp.com
 Building seamless mobile and web applications with advanced AI and blockchain features.
 - Created seamless mobile applications compatible with various platforms
 - Engineered web applications incorporating advanced AI features
+- Troubleshot and resolved technical issues in existing mobile and web applications promptly
 - Developed smart contracts using Solidity for a multi-level Reward System
+- Tested and debugged blockchain-based applications to ensure quality assurance
 - Developed strategies to increase transaction throughputs by optimizing codebases
 - Participated in open source communities such as Polygon Guild and Arbitrum Stylus
 - **Tech:** Solidity, Smart Contracts, AI, Mobile, Web
 
 ### Mobile Engineer — Africartz
-**11/2024 – 05/2025** · https://www.africartz.com
+**11/2024 – 05/2025** · Lagos, Nigeria · https://www.africartz.com
 Developing cross-platform mobile applications for e-commerce.
 - Developed the Africartz mobile application for cross-platform usage
 - Enhanced basic features and worked on UI improvements
@@ -192,17 +207,18 @@ Developing cross-platform mobile applications for e-commerce.
 - **Tech:** Mobile, Cross-platform, UI/UX
 
 ### Fullstack & Mobile Engineer — ELC Nigeria
-**03/2024 – 04/2025**
+**03/2024 – 04/2025** · Abuja, Nigeria
 Modernizing real estate applications and providing technical leadership.
 - Modernized codebases to improve functionality of real estate web and mobile applications
 - Coordinated testing and validation procedures through the software development lifecycle
 - Provided technical expertise to team members regarding mobile application design
 - Implemented new features that boosted user satisfaction by 20%
 - Conducted weekly research to enhance application credibility and value
+- Resolved bugs across various applications to ensure optimal performance
 - **Tech:** Real Estate, Mobile, Web, Full-Stack
 
 ### Mobile Engineer (Contract) — EdSqill
-**03/2024 – 12/2024** · https://edsqill.com
+**03/2024 – 12/2024** · Abuja, Nigeria · https://edsqill.com
 Enhancing educational mobile platforms for better user engagement.
 - Enhanced functionality of mobile applications to improve user experience
 - Revamped existing user interface for better engagement
@@ -211,18 +227,19 @@ Enhancing educational mobile platforms for better user engagement.
 - **Tech:** Flutter, Mobile, UI/UX, Education
 
 ### Mobile Engineer (Contract) — Laundry DNA
-**04/2023 – 10/2023**
+**04/2023 – 10/2023** · Abuja, Nigeria
 Optimizing laundry service applications for efficiency and user experience.
 - Enhanced mobile applications by improving navigation and categorization, increasing functionality by 30%
 - Integrated third-party APIs to expand application functionality
+- Conducted code reviews to ensure quality and maintainability of mobile applications
 - Improved app security and features, resulting in a 20% increase in app usage
 - Reduced bug resolution time by 20%, ensuring timely fixes
 - Implemented new app features boosting app usage by over 20%
 - Resolved bugs in payment gateway to ensure seamless transactions
 - **Tech:** Flutter, Mobile, Payment Gateway, UI/UX
 
-### Fullstack & Mobile Engineer — INEC (Intern)
-**02/2022 – 07/2023** · https://inecnigeria.org
+### Fullstack & Mobile Engineer — INEC (Independent National Electoral Commission) — Intern
+**02/2022 – 07/2023** · Abuja, Nigeria · https://inecnigeria.org
 Developing critical electoral systems for national democratic processes.
 - Developed Voter Enrollment Mobile Application, enhancing voter verification processes by 30%
 - Configured Bi-Modal Voters Registration System (BVAS) devices to ensure 100% election integrity
@@ -231,7 +248,7 @@ Developing critical electoral systems for national democratic processes.
 - **Tech:** Android, Python, Custom OS, BVAS, Government Systems
 
 ### Blockchain Engineer — Nimedix Ecosystem
-**07/2022 – 12/2022**
+**07/2022 – 12/2022** · Abuja, Nigeria
 Developing decentralized healthcare solutions using NEAR Protocol.
 - Developed basic smart contracts using Rust programming language
 - Built applications with the NEAR Protocol blockchain

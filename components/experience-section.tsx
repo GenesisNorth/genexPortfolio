@@ -5,6 +5,7 @@ type Role = {
   role: string
   company: string
   dates: string
+  location: string
   website?: string
   summary: string
   bullets: string[]
@@ -17,6 +18,7 @@ const ROLES: Role[] = [
     role: "Backend & AI Engineer",
     company: "Niteon",
     dates: "06/2025 – Present",
+    location: "Colorado, USA",
     website: "https://niteonhq.com",
     summary: "Leading backend development and AI integration for e-commerce solutions.",
     bullets: [
@@ -34,6 +36,7 @@ const ROLES: Role[] = [
     role: "Blockchain & Mobile Engineer",
     company: "TrashCoin",
     dates: "08/2024 – 04/2025",
+    location: "City of Dover, USA",
     website: "https://trashcoin.eu",
     summary: "Developing mobile applications for cryptocurrency transactions and wallet management.",
     bullets: [
@@ -41,6 +44,7 @@ const ROLES: Role[] = [
       "Integrated blockchain technology into mobile platforms for secure transactions",
       "Built a custom token for transactions using Solana blockchain and Rust",
       "Integrated third-party APIs into existing mobile products",
+      "Used bug-tracking software like JIRA to document defects found during testing",
       "Improved mobile application features to reduce latency and improve load times",
       "Implemented user interface designs for seamless user experiences across devices",
     ],
@@ -51,6 +55,7 @@ const ROLES: Role[] = [
     role: "Fullstack & AI Engineer",
     company: "Century Information Systems",
     dates: "01/2025 – 07/2025",
+    location: "Abuja, Nigeria",
     website: "https://centuryinformationsystems.com",
     summary: "Full-stack development with a focus on AI integration and performance optimization.",
     bullets: [
@@ -66,12 +71,15 @@ const ROLES: Role[] = [
     role: "Fullstack & Blockchain Engineer",
     company: "SlantApp Technologies",
     dates: "11/2023 – 05/2025",
+    location: "Abuja, Nigeria",
     website: "https://www.slantapp.com",
     summary: "Building seamless mobile and web applications with advanced AI and blockchain features.",
     bullets: [
       "Created seamless mobile applications compatible with various platforms",
       "Engineered web applications incorporating advanced AI features",
+      "Troubleshot and resolved technical issues in existing mobile and web applications promptly",
       "Developed smart contracts using Solidity for a multi-level Reward System",
+      "Tested and debugged blockchain-based applications to ensure quality assurance",
       "Developed strategies to increase transaction throughputs by optimizing codebases",
       "Participated in open source communities such as Polygon Guild and Arbitrum Stylus",
     ],
@@ -82,6 +90,7 @@ const ROLES: Role[] = [
     role: "Mobile Engineer",
     company: "Africartz",
     dates: "11/2024 – 05/2025",
+    location: "Lagos, Nigeria",
     website: "https://www.africartz.com",
     summary: "Developing cross-platform mobile applications for e-commerce.",
     bullets: [
@@ -98,6 +107,7 @@ const ROLES: Role[] = [
     role: "Fullstack & Mobile Engineer",
     company: "ELC Nigeria",
     dates: "03/2024 – 04/2025",
+    location: "Abuja, Nigeria",
     summary: "Modernizing real estate applications and providing technical leadership.",
     bullets: [
       "Modernized codebases to improve real estate web and mobile applications",
@@ -105,6 +115,7 @@ const ROLES: Role[] = [
       "Provided technical expertise to team members regarding mobile application design",
       "Implemented new features that boosted user satisfaction by 20%",
       "Conducted weekly research to enhance application credibility and value",
+      "Resolved bugs across various applications to ensure optimal performance",
     ],
     tech: ["Real Estate", "Mobile", "Web", "Full-Stack"],
   },
@@ -113,6 +124,7 @@ const ROLES: Role[] = [
     role: "Mobile Engineer (Contract)",
     company: "EdSqill",
     dates: "03/2024 – 12/2024",
+    location: "Abuja, Nigeria",
     website: "https://edsqill.com",
     summary: "Enhancing educational mobile platforms for better user engagement.",
     bullets: [
@@ -128,10 +140,12 @@ const ROLES: Role[] = [
     role: "Mobile Engineer (Contract)",
     company: "Laundry DNA",
     dates: "04/2023 – 10/2023",
+    location: "Abuja, Nigeria",
     summary: "Optimizing laundry service applications for efficiency and user experience.",
     bullets: [
       "Improved navigation and categorization, increasing functionality by 30%",
       "Integrated third-party APIs to expand application functionality",
+      "Conducted code reviews to ensure quality and maintainability of mobile applications",
       "Improved app security and features, resulting in a 20% increase in app usage",
       "Reduced bug resolution time by 20%, ensuring timely fixes",
       "Resolved bugs in payment gateway to ensure seamless transactions",
@@ -141,15 +155,16 @@ const ROLES: Role[] = [
   {
     slug: "inec",
     role: "Fullstack & Mobile Engineer (Intern)",
-    company: "INEC",
+    company: "INEC — Independent National Electoral Commission",
     dates: "02/2022 – 07/2023",
+    location: "Abuja, Nigeria",
     website: "https://inecnigeria.org",
     summary: "Developing critical electoral systems for national democratic processes.",
     bullets: [
       "Developed Voter Enrollment Mobile Application, enhancing voter verification by 30%",
       "Configured Bi-Modal Voters Registration System (BVAS) devices for 100% election integrity",
-      "Conducted software testing on BVAS devices, boosting efficiency by over 50%",
-      "Implemented custom Android OS for Continuous Voter Registration (CVR)",
+      "Conducted software testing on old and new BVAS devices, boosting efficiency by over 50%",
+      "Implemented custom Android OS for Continuous Voter Registration (CVR) and Voter's Identification Number (VIN)",
     ],
     tech: ["Android", "Python", "Custom OS", "BVAS", "Government Systems"],
   },
@@ -158,6 +173,7 @@ const ROLES: Role[] = [
     role: "Blockchain Engineer",
     company: "Nimedix Ecosystem",
     dates: "07/2022 – 12/2022",
+    location: "Abuja, Nigeria",
     summary: "Developing decentralized healthcare solutions using NEAR Protocol.",
     bullets: [
       "Developed basic smart contracts using the Rust programming language",
@@ -188,7 +204,9 @@ export function ExperienceSection() {
               <h3 className="exp-role">
                 {r.role} <span className="exp-at">@</span> <span className="exp-company">{r.company}</span>
               </h3>
-              <span className="exp-dates">{r.dates}</span>
+              <span className="exp-dates">
+                {r.dates} · {r.location}
+              </span>
             </div>
             <p className="term-out exp-summary">{r.summary}</p>
             <ul className="exp-bullets">

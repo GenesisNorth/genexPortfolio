@@ -7,9 +7,11 @@ import { MacWindow } from "@/components/mac-window"
 import { AboutSection } from "@/components/about-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { ContactSection } from "@/components/contact-section"
+import { ProjectsSection } from "@/components/projects-section"
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const statusElement = document.querySelector(".system-status")
@@ -83,15 +85,32 @@ export default function Home() {
       )}
 
       <header>
-        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div className="logo">System.Ref</div>
-          <nav className="nav-links">
-            <a href="#about">ABOUT</a>
-            <a href="#work">PROJECTS</a>
-            <a href="#experience">EXPERIENCE</a>
-            <a href="#contact">CONTACT</a>
+        <div className="container header-inner">
+          <div className="logo">Genesis.Habila</div>
+          <nav id="primary-nav" className={`nav-links ${menuOpen ? "open" : ""}`}>
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              ABOUT
+            </a>
+            <a href="#work" onClick={() => setMenuOpen(false)}>
+              PROJECTS
+            </a>
+            <a href="#experience" onClick={() => setMenuOpen(false)}>
+              EXPERIENCE
+            </a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              CONTACT
+            </a>
           </nav>
           <div className="system-status">SYS_UP: 24:12:05:08 | CPU: 12%</div>
+          <button
+            className="nav-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            aria-controls="primary-nav"
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            {menuOpen ? "[ close ]" : "[ menu ]"}
+          </button>
         </div>
       </header>
 
@@ -100,23 +119,31 @@ export default function Home() {
         <section className="hero">
           <div className="hero-content">
             <p style={{ marginBottom: "10px" }}>
-              <span className="prompt">{"guest@system:~$"}</span>{" "}
+              <span className="prompt">{"genesis@habila:~$"}</span>{" "}
               <Typed text="whoami" className="command" />
             </p>
             <h1>
-              Creative <span>Developer</span> &amp; Designer
+              Genesis <span>Habila</span>
             </h1>
-            <p>
-              Architecting digital experiences through a lens of brutalist minimalism and retro-futurism. Based in the
-              digital ether.
+            <p className="hero-role">
+              Software Engineer <span className="hero-role-accent">// AI &amp; Blockchain</span>
             </p>
-            <a href="#work" className="btn-retro">
-              EXPLORE FILES
-            </a>
+            <p>
+              Building innovative solutions with years of experience in decentralized systems, artificial intelligence,
+              and scalable full-stack architectures.
+            </p>
+            <div className="hero-cta">
+              <a href="#work" className="btn-retro">
+                VIEW PROJECTS
+              </a>
+              <a href="#contact" className="btn-ghost">
+                GET IN TOUCH
+              </a>
+            </div>
           </div>
           <div className="window-frame">
             <div className="window-header">
-              <span>PORTRAIT_01.JPG</span>
+              <span>genesis_habila.jpg</span>
               <div className="window-controls">
                 <button className="window-btn" aria-label="Minimize">
                   <span className="minimize-icon"></span>
@@ -136,20 +163,20 @@ export default function Home() {
         {/* Stats */}
         <div className="stats-bar">
           <div className="stat-item">
-            <div className="stat-val">08+</div>
-            <div className="stat-label">Years XP</div>
+            <div className="stat-val">5+</div>
+            <div className="stat-label">Years Experience</div>
           </div>
           <div className="stat-item">
-            <div className="stat-val">124</div>
-            <div className="stat-label">Nodes Built</div>
+            <div className="stat-val">10</div>
+            <div className="stat-label">Companies</div>
           </div>
           <div className="stat-item">
-            <div className="stat-val">001</div>
-            <div className="stat-label">Global Rank</div>
+            <div className="stat-val">06</div>
+            <div className="stat-label">Featured Projects</div>
           </div>
           <div className="stat-item">
-            <div className="stat-val">42k</div>
-            <div className="stat-label">Lines Written</div>
+            <div className="stat-val">15+</div>
+            <div className="stat-label">Technologies</div>
           </div>
         </div>
 
@@ -159,98 +186,7 @@ export default function Home() {
         {/* Portfolio */}
         <section id="work">
           <h2 className="section-title">Latest Deployments</h2>
-          <div className="portfolio-grid">
-            {/* Project 1 */}
-            <div className="project-card">
-              <div className="window-header">
-                <span>PROJECT_ALPHA</span>
-                <div className="window-controls">
-                  <button className="window-btn" aria-label="Minimize">
-                    <span className="minimize-icon"></span>
-                  </button>
-                  <button className="window-btn" aria-label="Maximize">
-                    <span className="maximize-icon"></span>
-                  </button>
-                  <button className="window-btn window-close" aria-label="Close">
-                    <span className="close-icon"></span>
-                  </button>
-                </div>
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80"
-                alt="Retro Tech"
-                className="project-img"
-              />
-              <div className="project-info">
-                <span className="project-tag">#WEB_DESIGN #UI_UX</span>
-                <h3 className="project-title">Vaporwave Interface System</h3>
-                <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}>
-                  A complete design system inspired by 90s OS aesthetics with modern react functionality.
-                </p>
-                <span className="project-cat">{"> cat vaporwave_interface.sys"}</span>
-              </div>
-            </div>
-            {/* Project 2 */}
-            <div className="project-card">
-              <div className="window-header">
-                <span>PROJECT_BETA</span>
-                <div className="window-controls">
-                  <button className="window-btn" aria-label="Minimize">
-                    <span className="minimize-icon"></span>
-                  </button>
-                  <button className="window-btn" aria-label="Maximize">
-                    <span className="maximize-icon"></span>
-                  </button>
-                  <button className="window-btn window-close" aria-label="Close">
-                    <span className="close-icon"></span>
-                  </button>
-                </div>
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80"
-                alt="Coding"
-                className="project-img"
-              />
-              <div className="project-info">
-                <span className="project-tag">#DEVELOPMENT #WEB3</span>
-                <h3 className="project-title">Cybernetic Dashboard</h3>
-                <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}>
-                  High-performance data visualization for distributed cloud networks.
-                </p>
-                <span className="project-cat">{"> cat cybernetic_dashboard.exe"}</span>
-              </div>
-            </div>
-            {/* Project 3 */}
-            <div className="project-card">
-              <div className="window-header">
-                <span>PROJECT_GAMMA</span>
-                <div className="window-controls">
-                  <button className="window-btn" aria-label="Minimize">
-                    <span className="minimize-icon"></span>
-                  </button>
-                  <button className="window-btn" aria-label="Maximize">
-                    <span className="maximize-icon"></span>
-                  </button>
-                  <button className="window-btn window-close" aria-label="Close">
-                    <span className="close-icon"></span>
-                  </button>
-                </div>
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&q=80"
-                alt="Abstract Art"
-                className="project-img"
-              />
-              <div className="project-info">
-                <span className="project-tag">#BRANDING #IDENTITY</span>
-                <h3 className="project-title">Analog Brand Core</h3>
-                <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}>
-                  Reimagining brand identity through glitch art and thermal printing techniques.
-                </p>
-                <span className="project-cat">{"> cat analog_brand.core"}</span>
-              </div>
-            </div>
-          </div>
+          <ProjectsSection />
         </section>
 
         {/* Experience */}
@@ -318,24 +254,37 @@ export default function Home() {
           <div className="footer-logo">
             <p style={{ color: "var(--accent)", fontSize: "0.8rem", marginBottom: "10px" }}>END_OF_PAGE</p>
             <h2>
-              SYS_REF
+              GENESIS
               <br />
-              2024©
+              HABILA©
             </h2>
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ marginBottom: "20px" }}>
-              <a href="#" style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}>
-                TWITTER
-              </a>
-              <a href="#" style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}>
+              <a
+                href="https://github.com/GenesisNorth"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}
+              >
                 GITHUB
               </a>
-              <a href="#" style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}>
+              <a
+                href="https://linkedin.com/in/habilagenesis"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}
+              >
                 LINKEDIN
               </a>
+              <a
+                href="mailto:habilagenesis@gmail.com"
+                style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}
+              >
+                EMAIL
+              </a>
             </div>
-            <p className="copyright">BUILT ON THE EDGE OF THE WEB. ALL RIGHTS RESERVED.</p>
+            <p className="copyright">SOFTWARE ENGINEER · AI &amp; BLOCKCHAIN · BUILT FROM THE TERMINAL.</p>
           </div>
         </footer>
 

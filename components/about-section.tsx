@@ -29,25 +29,46 @@ export function AboutSection() {
 
       <Prompt path="~">cat education.txt</Prompt>
       <p className="term-out">
-        <span className="term-strong">B.Tech Statistics</span>
+        <span className="term-strong">B.Tech Statistics</span> <span className="term-accent">— 2023</span>
         <br />
         Federal University of Technology Minna, Niger State.
       </p>
+
+      <Prompt path="~">ls ~/practices</Prompt>
+      <div className="term-tags">
+        <span className="term-tag">Fullstack Development</span>
+        <span className="term-tag">Mobile Application Development</span>
+        <span className="term-tag">Blockchain &amp; AI Development</span>
+        <span className="term-tag">Technical Management</span>
+      </div>
 
       <Prompt path="~">ls ~/research-interests</Prompt>
       <div className="term-tags">
         <span className="term-tag">Space Exploration / Astrophysics</span>
         <span className="term-tag">AIOT &amp; Embedded Systems</span>
-        <span className="term-tag">AI/ML</span>
         <span className="term-tag">Blockchain</span>
       </div>
 
+      <Prompt path="~">cat soft-skills.txt</Prompt>
+      <p className="term-out">
+        Adaptability · Problem Solving · Ideation · Research · Written &amp; Verbal Communication · Effective Listening ·
+        Employee Relations · Team Building
+      </p>
+
       <Prompt path="~">cat certifications.txt</Prompt>
-      <p className="term-out">LinkedIn Learning · Udemy · Digital Nigeria</p>
+      <ul className="term-list">
+        <li>LinkedIn Learning — Web Security, Databases, Full Stack Development, JavaScript Essentials</li>
+        <li>Udemy — Laravel, JavaScript</li>
+        <li>Digital Nigeria &amp; Microsoft — Software Development Fundamentals, Networking Fundamentals</li>
+      </ul>
 
       <Prompt path="~">cat volunteering.txt</Prompt>
+      <ul className="term-list">
+        <li>Fail Conference — coordinated with speakers for an event attended by 50+ developers (09/2022)</li>
+        <li>Google Developers Group Abuja — community-building strategies for events with 500+ attendees (09/2022)</li>
+      </ul>
       <p className="term-out">
-        Fail Conference · Google Developers Group Abuja <span className="cursor-blink">_</span>
+        <span className="cursor-blink">_</span>
       </p>
     </MacWindow>
   )
