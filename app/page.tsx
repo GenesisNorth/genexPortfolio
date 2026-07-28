@@ -156,7 +156,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <img src="/hero-portrait.jpg" alt="Professional Portrait" className="hero-image" />
+            <img src="/headshot-genesis.JPG" alt="Genesis Habila" className="hero-image" />
           </div>
         </section>
 
