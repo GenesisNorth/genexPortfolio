@@ -289,15 +289,14 @@ export default function Home() {
         </footer>
 
         <div className="footer-badge">
-          <a href="https://v0.link/cdiK7jS" target="_blank" rel="noopener noreferrer" className="badge-link-footer">
-            <div className="badge-content-footer">
-              <span className="badge-label">UI:</span>
-              <span className="badge-highlight">1UI.dev</span>
-              <span className="badge-separator">→</span>
-              <span className="badge-label">LIVE:</span>
-              <span className="badge-highlight">v0.app</span>
-            </div>
-          </a>
+          <div className="badge-content-footer">
+            <span className="badge-label">©</span>
+            <span className="badge-highlight">2026</span>
+            <span className="badge-separator">·</span>
+            <span className="badge-highlight">GENESIS HABILA</span>
+            <span className="badge-separator">·</span>
+            <span className="badge-label">ALL RIGHTS RESERVED</span>
+          </div>
         </div>
       </div>
     </>

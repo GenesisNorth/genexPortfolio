@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   title: "Habila Genesis | Software Engineer - AI & Blockchain",
   description:
     "Professional portfolio of Habila Genesis — Software Engineer specializing in Blockchain, AI, and Full-Stack Development with 5+ years of experience.",
-  generator: "v0.app",
   icons: {
     icon: [
       {
