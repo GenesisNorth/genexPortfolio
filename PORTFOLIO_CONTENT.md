@@ -5,6 +5,9 @@
 > (currently on `localhost:3002`), replacing its placeholder content.
 > Extracted 2026-07-23. Reconciled with **Habila-Genesis CV.pdf** on 2026-07-24 (locations,
 > extra bullets, certifications detail, graduation year, practices & soft skills, references).
+> Updated 2026-07-29 from **Genesis Habila update CV.pdf** (added Primstack & SAYS Energy roles;
+> renamed SlantApp Technologies → RSC Byte; Niteon end date 12/2025; revised TrashCoin / Laundry DNA
+> bullets; added Software Security / Cybersecurity emphasis). Now 12 roles.
 
 ---
 
@@ -32,12 +35,12 @@
 ## 3. About Me
 
 **Paragraph 1:**
-A Passionate and Innovative Software Engineer with years of extensive experience in developing high-end, Fullstack, Mobile, Blockchain and AI Solutions. Also, with keen attention to Technical Leadership, Project Management and Research.
+A Passionate and Innovative Software Engineer and enthusiastic Software Security individual with years of extensive experience in developing high-end, Fullstack, Mobile, Blockchain and AI Solutions. Also, with keen attention to Technical Leadership, Project Management, Cybersecurity and Research.
 
 **Paragraph 2:**
-A Consistent Learner with fast adaptability skills, Problem Solving and Cross functional Team Collaboration. My research interests include Space Exploration/Astrophysics, AIOT & Embedded Systems, and Blockchain.
+A Consistent Learner with adaptability skills, Problem Solving and Cross functional Team Collaboration. My research interests include Space Exploration/Astrophysics, AIOT & Embedded Systems, and Blockchain.
 
-**Focus areas (badges):** Technical Leadership · Project Management · AI & Blockchain · Research
+**Focus areas (badges):** Technical Leadership · Project Management · Cybersecurity · AI & Blockchain · Research
 
 ### Education
 - **B.Tech Statistics** — Federal University of Technology Minna, Niger State. **(2023)**
@@ -152,28 +155,44 @@ Accommodation booking platform featuring a seamless mobile experience for travel
 
 ## 6. Work Experience
 
+### Mobile & AI Engineer — Primstack
+**12/2025 – 06/2026** · United Kingdom
+Building cross-platform mobile experiences with AI-powered discovery and strong data security.
+- Developed a seamless cross-platform application for iOS and Android devices
+- Implemented AI search and recommendation for users on the PLACES app
+- Implemented safe, high-level data encryption
+- **Tech:** Mobile, AI/ML, Cross-platform, Encryption, Security
+
+### Project Development Executive — SAYS Energy Services
+**10/2025 – 06/2026** · Lagos, Nigeria
+Driving project development and research within the oil & gas sector.
+- Worked on project documentation, ideation, and brainstorming with the project development team
+- Conducted extensive research in the oil and gas field
+- **Tech:** Project Management, Research, Oil & Gas, Documentation
+
 ### Backend & AI Engineer — Niteon
-**06/2025 – Present** · Colorado, USA · https://niteonhq.com
+**06/2025 – 12/2025** · Colorado, USA · https://niteonhq.com
 Leading backend development and AI integration for e-commerce solutions.
+- Collaborated with design and backend teams to refine UI workflows and data flows
+- Integrated AI-powered product suggestions and chat interfaces into existing UIs using efficient state management
 - Fixed existing system bugs that improved user experience by 50%
-- Built an AI recommendation system for recommending products and conversational user interactions
-- Collaborated with cross-functional teams to integrate AI solutions into existing systems
+- Built an AI recommendation system for products and conversational user interactions
+- Ensured secure payment processing
 - Designed algorithms to optimize performance of artificial intelligence implementation
 - Optimized codebase for improved scalability and efficiency of automated processes
-- Ensured secure payment processing
-- **Tech:** AI/ML, Backend, Algorithms, Optimization
+- **Tech:** AI/ML, Backend, State Management, Algorithms, Optimization
 
 ### Blockchain & Mobile Engineer — TrashCoin
 **08/2024 – 04/2025** · City of Dover, USA · https://trashcoin.eu
 Developing mobile applications for cryptocurrency transactions and wallet management.
-- Developed mobile application allowing for cryptocurrency transactions and wallet management
-- Integrated blockchain technology into mobile platforms for secure transactions
-- Built a custom token for transactions using Solana blockchain and Rust
-- Integrated third-party APIs into existing mobile products
-- Used bug-tracking software like JIRA to document defects found during testing
-- Improved mobile application features to reduce latency and improve load times
+- Developed mobile application for cryptocurrency transactions and wallet management
 - Implemented user interface designs for seamless user experiences across devices
-- **Tech:** Solana, Rust, Flutter, Mobile, Blockchain
+- Implemented dashboards and transaction tables using React, TypeScript, and Tailwind CSS
+- Integrated blockchain technology into mobile platforms for secure transactions
+- Integrated third-party APIs into existing mobile products
+- Built a custom token for transactions using Solana blockchain and Rust
+- Improved mobile application features to reduce latency and improve load times
+- **Tech:** Solana, Rust, Flutter, React, TypeScript, Blockchain
 
 ### Fullstack & AI Engineer — Century Information Systems
 **01/2025 – 07/2025** · Abuja, Nigeria · https://centuryinformationsystems.com
@@ -184,9 +203,12 @@ Full-stack development with a focus on AI integration and performance optimizati
 - Optimized frontend performance by implementing caching strategies such as Redis
 - **Tech:** React, AI/ML, Text-to-Speech, Redis, Frontend
 
-### Fullstack & Blockchain Engineer — SlantApp Technologies
-**11/2023 – 05/2025** · Abuja, Nigeria · https://www.slantapp.com
+### Fullstack & Blockchain Engineer — RSC Byte
+**11/2023 – 05/2025** · Abuja, Nigeria
+*(Previously listed as SlantApp Technologies; renamed to RSC Byte in the latest CV. Website unknown — link omitted.)*
 Building seamless mobile and web applications with advanced AI and blockchain features.
+- Developed and maintained reusable UI components for web and mobile platforms
+- Collaborated on responsive layouts, improving load speed by 35%
 - Created seamless mobile applications compatible with various platforms
 - Engineered web applications incorporating advanced AI features
 - Troubleshot and resolved technical issues in existing mobile and web applications promptly
@@ -194,7 +216,7 @@ Building seamless mobile and web applications with advanced AI and blockchain fe
 - Tested and debugged blockchain-based applications to ensure quality assurance
 - Developed strategies to increase transaction throughputs by optimizing codebases
 - Participated in open source communities such as Polygon Guild and Arbitrum Stylus
-- **Tech:** Solidity, Smart Contracts, AI, Mobile, Web
+- **Tech:** Solidity, Smart Contracts, React, AI, Web, Mobile
 
 ### Mobile Engineer — Africartz
 **11/2024 – 05/2025** · Lagos, Nigeria · https://www.africartz.com
@@ -226,16 +248,14 @@ Enhancing educational mobile platforms for better user engagement.
 - Optimized app performance to ensure faster load times and responsiveness
 - **Tech:** Flutter, Mobile, UI/UX, Education
 
-### Mobile Engineer (Contract) — Laundry DNA
+### Frontend & Mobile Engineer (Contract) — Laundry DNA
 **04/2023 – 10/2023** · Abuja, Nigeria
 Optimizing laundry service applications for efficiency and user experience.
-- Enhanced mobile applications by improving navigation and categorization, increasing functionality by 30%
-- Integrated third-party APIs to expand application functionality
-- Conducted code reviews to ensure quality and maintainability of mobile applications
-- Improved app security and features, resulting in a 20% increase in app usage
-- Reduced bug resolution time by 20%, ensuring timely fixes
-- Implemented new app features boosting app usage by over 20%
-- Resolved bugs in payment gateway to ensure seamless transactions
+- Enhanced mobile applications by improving navigation and categorization of laundry services, increasing functionality by 30%
+- Integrated third-party APIs to expand application functionality and user experience
+- Improved app security and features, resulting in a 20% increase in app usage within three months
+- Implemented new app features to facilitate swift user interaction, boosting usage by over 20%
+- Resolved bugs in the payment gateway to ensure seamless transactions
 - **Tech:** Flutter, Mobile, Payment Gateway, UI/UX
 
 ### Fullstack & Mobile Engineer — INEC (Independent National Electoral Commission) — Intern

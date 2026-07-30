@@ -167,7 +167,7 @@ export default function Home() {
             <div className="stat-label">Years Experience</div>
           </div>
           <div className="stat-item">
-            <div className="stat-val">10</div>
+            <div className="stat-val">12</div>
             <div className="stat-label">Companies</div>
           </div>
           <div className="stat-item">

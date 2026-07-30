@@ -5,17 +5,17 @@ export function AboutSection() {
     <MacWindow id="about" title="genesis@habila: ~/about — -zsh">
       <Prompt path="~">whoami</Prompt>
       <p className="term-out term-strong">
-        Genesis Habila — Software Engineer <span className="term-accent">(AI &amp; Blockchain)</span>
+        Genesis Habila — Software Engineer <span className="term-accent">(AI, Blockchain &amp; Security)</span>
       </p>
 
       <Prompt path="~">cat about.txt</Prompt>
       <p className="term-out">
-        A Passionate and Innovative Software Engineer with years of extensive experience in developing high-end,
-        Fullstack, Mobile, Blockchain and AI Solutions. Also, with keen attention to Technical Leadership, Project
-        Management and Research.
+        A Passionate and Innovative Software Engineer and enthusiastic Software Security individual with years of
+        extensive experience in developing high-end, Fullstack, Mobile, Blockchain and AI Solutions. Also, with keen
+        attention to Technical Leadership, Project Management, Cybersecurity and Research.
       </p>
       <p className="term-out">
-        A Consistent Learner with fast adaptability skills, Problem Solving and Cross functional Team Collaboration. My
+        A Consistent Learner with adaptability skills, Problem Solving and Cross functional Team Collaboration. My
         research interests include Space Exploration/Astrophysics, AIOT &amp; Embedded Systems, and Blockchain.
       </p>
 
@@ -23,6 +23,7 @@ export function AboutSection() {
       <div className="term-tags">
         <span className="term-tag">Technical Leadership</span>
         <span className="term-tag">Project Management</span>
+        <span className="term-tag">Cybersecurity</span>
         <span className="term-tag">AI &amp; Blockchain</span>
         <span className="term-tag">Research</span>
       </div>

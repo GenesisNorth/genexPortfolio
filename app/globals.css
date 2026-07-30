@@ -1226,15 +1226,44 @@ section[id],
 }
 
 /* --- experience list --- */
+/* Roadmap / timeline: a vertical "road" with a glowing node at each milestone */
 .exp-list {
-  margin-top: 10px;
+  margin-top: 18px;
 }
 .exp-item {
-  padding: 18px 0 22px;
-  border-top: 1px solid var(--border-color);
+  position: relative;
+  padding: 2px 0 30px 38px;
 }
-.exp-item:first-child {
-  border-top: none;
+/* the node marker sitting on the road */
+.exp-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-retro);
+  background: var(--bg-color);
+  box-shadow: 0 0 10px rgba(0, 224, 90, 0.45);
+  z-index: 2;
+}
+/* the road segment connecting this node to the next */
+.exp-item::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  bottom: -6px;
+  width: 2px;
+  background: linear-gradient(var(--accent-retro), var(--border-color));
+  z-index: 1;
+}
+.exp-item:last-child {
+  padding-bottom: 4px;
+}
+.exp-item:last-child::after {
+  display: none;
 }
 .exp-head {
   display: flex;
@@ -1418,6 +1447,20 @@ section[id],
   .exp-head {
     flex-direction: column;
     gap: 2px;
+  }
+  /* tighten the roadmap indent on small screens */
+  .exp-item {
+    padding-left: 28px;
+    padding-bottom: 26px;
+  }
+  .exp-item::before {
+    width: 13px;
+    height: 13px;
+    top: 5px;
+  }
+  .exp-item::after {
+    left: 5.5px;
+    top: 17px;
   }
   .term-field {
     flex-direction: column;
