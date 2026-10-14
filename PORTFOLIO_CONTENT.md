@@ -16,18 +16,18 @@
 | Field | Value |
 |---|---|
 | Name | **Genesis Habila** (also written "Habila Genesis") |
-| Role / Title | Software Engineer — AI & Blockchain |
-| Page `<title>` | `Habila Genesis \| Software Engineer - AI & Blockchain` |
-| Meta description | Professional portfolio of Habila Genesis — Software Engineer specializing in Blockchain, AI, and Full-Stack Development with 5+ years of experience |
+| Role / Title | Full-Stack Software Engineer — AI & Blockchain |
+| Page `<title>` | `Habila Genesis \| Full-Stack Software Engineer · AI & Blockchain` |
+| Meta description | Professional portfolio of Habila Genesis — Full-Stack Software Engineer specializing in Full-Stack Architecture, Artificial Intelligence, and Blockchain systems |
 | Experience | 5+ years |
 
 ---
 
 ## 2. Hero
 
-- **Eyebrow / role:** Software Engineer
+- **Eyebrow / role:** Full-Stack Software Engineer // AI & Blockchain
 - **Name (headline):** Genesis Habila
-- **Tagline:** Building innovative solutions with years of experience in decentralized systems, artificial intelligence, and scalable full-stack architectures.
+- **Tagline:** Building innovative solutions with extensive experience in full-stack engineering, scalable architectures, artificial intelligence, and decentralized blockchain systems.
 - **CTAs:** `Explore` · `Get In Touch`
 
 ---
@@ -302,7 +302,7 @@ Where each piece of content should land when replacing the new site's placeholde
 |---|---|
 | Logo `System.Ref` | `Genesis Habila` (or a chosen brand handle) |
 | Hero eyebrow `guest@system:~$ whoami` | keep, or `whoami` → answers with name below |
-| Hero `Creative Developer & Designer` | `Software Engineer — AI & Blockchain` |
+| Hero `Creative Developer & Designer` | `Full-Stack Software Engineer // AI & Blockchain` |
 | Hero paragraph (brutalist minimalism…) | Hero tagline (§2) |
 | Stat: `08+ Years XP` | `5+` Years XP |
 | Stat: `124 Nodes Built` | e.g. real project count (`6` featured / more) |

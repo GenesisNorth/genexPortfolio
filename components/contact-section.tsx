@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react"
 import { MacWindow, Prompt } from "@/components/mac-window"
+import { ScrollTyped } from "@/components/scroll-typed"
 
 const EMAIL = "habilagenesis@gmail.com"
 
@@ -54,9 +55,11 @@ export function ContactSection() {
       </pre>
 
       <Prompt path="~">./send-message.sh</Prompt>
-      <p className="term-out term-muted">
-        // Have a project in mind or want to discuss opportunities? I&apos;d love to hear from you.
-      </p>
+      <ScrollTyped
+        text="// Have a project in mind or want to discuss opportunities? I'd love to hear from you."
+        className="term-out term-muted"
+        delay={100}
+      />
 
       <form className="term-form" onSubmit={handleSubmit}>
         <label className="term-field">

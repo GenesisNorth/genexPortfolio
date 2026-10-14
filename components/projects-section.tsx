@@ -1,3 +1,5 @@
+import { ScrollTyped } from "@/components/scroll-typed"
+
 type ProjectLink = { label: string; href: string }
 
 type Project = {
@@ -122,7 +124,10 @@ export function ProjectsSection() {
           <div className="project-info">
             <span className="project-tag">{p.tags.map((t) => `#${t}`).join(" ")}</span>
             <h3 className="project-title">{p.name}</h3>
-            <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}>{p.desc}</p>
+            <ScrollTyped
+              text={p.desc}
+              style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}
+            />
             <div className="project-links">
               {p.links.map((l) => (
                 <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="project-link">

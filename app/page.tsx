@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { TerminalBoot } from "@/components/terminal-boot"
-import { Typed } from "@/components/typed"
+import { Typed, ScrollTyped } from "@/components/typed"
 import { MacWindow } from "@/components/mac-window"
 import { AboutSection } from "@/components/about-section"
 import { ExperienceSection } from "@/components/experience-section"
@@ -126,12 +126,12 @@ export default function Home() {
               Genesis <span>Habila</span>
             </h1>
             <p className="hero-role">
-              Software Engineer <span className="hero-role-accent">// AI &amp; Blockchain</span>
+              Full-Stack Software Engineer <span className="hero-role-accent">// AI &amp; Blockchain</span>
             </p>
-            <p>
-              Building innovative solutions with years of experience in decentralized systems, artificial intelligence,
-              and scalable full-stack architectures.
-            </p>
+            <ScrollTyped
+              text="Building innovative solutions with extensive experience in full-stack engineering, scalable architectures, artificial intelligence, and decentralized blockchain systems."
+              delay={350}
+            />
             <div className="hero-cta">
               <a href="#work" className="btn-retro">
                 VIEW PROJECTS
@@ -167,12 +167,8 @@ export default function Home() {
             <div className="stat-label">Years Experience</div>
           </div>
           <div className="stat-item">
-            <div className="stat-val">12</div>
+            <div className="stat-val">15+</div>
             <div className="stat-label">Companies</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-val">06</div>
-            <div className="stat-label">Featured Projects</div>
           </div>
           <div className="stat-item">
             <div className="stat-val">15+</div>
@@ -284,7 +280,7 @@ export default function Home() {
                 EMAIL
               </a>
             </div>
-            <p className="copyright">SOFTWARE ENGINEER · AI &amp; BLOCKCHAIN · BUILT FROM THE TERMINAL.</p>
+            <p className="copyright">FULL-STACK SOFTWARE ENGINEER · AI &amp; BLOCKCHAIN · BUILT FROM THE TERMINAL.</p>
           </div>
         </footer>
 

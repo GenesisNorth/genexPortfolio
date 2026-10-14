@@ -1,23 +1,25 @@
 import { MacWindow, Prompt } from "@/components/mac-window"
+import { ScrollTyped } from "@/components/scroll-typed"
 
 export function AboutSection() {
   return (
     <MacWindow id="about" title="genesis@habila: ~/about — -zsh">
       <Prompt path="~">whoami</Prompt>
       <p className="term-out term-strong">
-        Genesis Habila — Software Engineer <span className="term-accent">(AI, Blockchain &amp; Security)</span>
+        Genesis Habila — Full-Stack Software Engineer <span className="term-accent">(AI &amp; Blockchain)</span>
       </p>
 
       <Prompt path="~">cat about.txt</Prompt>
-      <p className="term-out">
-        A Passionate and Innovative Software Engineer and enthusiastic Software Security individual with years of
-        extensive experience in developing high-end, Fullstack, Mobile, Blockchain and AI Solutions. Also, with keen
-        attention to Technical Leadership, Project Management, Cybersecurity and Research.
-      </p>
-      <p className="term-out">
-        A Consistent Learner with adaptability skills, Problem Solving and Cross functional Team Collaboration. My
-        research interests include Space Exploration/Astrophysics, AIOT &amp; Embedded Systems, and Blockchain.
-      </p>
+      <ScrollTyped
+        text="A Passionate and Innovative Software Engineer and enthusiastic Software Security individual with years of extensive experience in developing high-end, Fullstack, Mobile, Blockchain and AI Solutions. Also, with keen attention to Technical Leadership, Project Management, Cybersecurity and Research."
+        className="term-out"
+        delay={100}
+      />
+      <ScrollTyped
+        text="A Consistent Learner with adaptability skills, Problem Solving and Cross functional Team Collaboration. My research interests include Space Exploration/Astrophysics, AIOT & Embedded Systems, and Blockchain."
+        className="term-out"
+        delay={300}
+      />
 
       <Prompt path="~">ls ~/focus</Prompt>
       <div className="term-tags">
@@ -51,10 +53,11 @@ export function AboutSection() {
       </div>
 
       <Prompt path="~">cat soft-skills.txt</Prompt>
-      <p className="term-out">
-        Adaptability · Problem Solving · Ideation · Research · Written &amp; Verbal Communication · Effective Listening ·
-        Employee Relations · Team Building
-      </p>
+      <ScrollTyped
+        text="Adaptability · Problem Solving · Ideation · Research · Written & Verbal Communication · Effective Listening · Employee Relations · Team Building"
+        className="term-out"
+        delay={100}
+      />
 
       <Prompt path="~">cat certifications.txt</Prompt>
       <ul className="term-list">

@@ -18,9 +18,9 @@ const _syne = Syne({
 })
 
 export const metadata: Metadata = {
-  title: "Habila Genesis | Software Engineer - AI & Blockchain",
+  title: "Habila Genesis | Full-Stack Software Engineer · AI & Blockchain",
   description:
-    "Professional portfolio of Habila Genesis — Software Engineer specializing in Blockchain, AI, and Full-Stack Development with 5+ years of experience.",
+    "Professional portfolio of Habila Genesis — Full-Stack Software Engineer specializing in Full-Stack Architecture, Artificial Intelligence, and Blockchain systems.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },

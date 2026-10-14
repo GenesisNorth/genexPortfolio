@@ -1,4 +1,5 @@
 import { MacWindow, Prompt } from "@/components/mac-window"
+import { ScrollTyped } from "@/components/scroll-typed"
 
 type Role = {
   slug: string
@@ -243,7 +244,7 @@ export function ExperienceSection() {
                 {r.dates} · {r.location}
               </span>
             </div>
-            <p className="term-out exp-summary">{r.summary}</p>
+            <ScrollTyped text={r.summary} className="term-out exp-summary" />
             <ul className="exp-bullets">
               {r.bullets.map((b, i) => (
                 <li key={i}>{b}</li>

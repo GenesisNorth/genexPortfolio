@@ -57,3 +57,6 @@ export function Typed({
     </span>
   )
 }
+
+export { ScrollTyped } from "@/components/scroll-typed"
+
