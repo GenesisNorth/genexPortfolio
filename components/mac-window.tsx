@@ -1,10 +1,24 @@
 import type { ReactNode } from "react"
 
 /**
- * Authentic macOS terminal/app window chrome: graphite title bar with the three
- * traffic-light controls on the left and a centered monospace title. Body is a
- * black terminal surface. Green frame + accents keep it on-theme.
+ * Title bar shared by every window on the page (sections, hero portrait,
+ * project cards): three phosphor "traffic lights" on the left and a centered
+ * monospace title. Purely decorative controls, so they're hidden from AT.
  */
+export function WindowBar({ title }: { title: string }) {
+  return (
+    <div className="win-bar">
+      <span className="win-dots" aria-hidden="true">
+        <span className="win-dot" />
+        <span className="win-dot" />
+        <span className="win-dot" />
+      </span>
+      <span className="win-title">{title}</span>
+    </div>
+  )
+}
+
+/** A full terminal window section: title bar + terminal body. */
 export function MacWindow({
   title,
   id,
@@ -17,16 +31,9 @@ export function MacWindow({
   className?: string
 }) {
   return (
-    <section id={id} className={`mac-window ${className ?? ""}`}>
-      <div className="mac-titlebar">
-        <div className="mac-dots" aria-hidden="true">
-          <span className="mac-dot mac-dot-red" />
-          <span className="mac-dot mac-dot-yellow" />
-          <span className="mac-dot mac-dot-green" />
-        </div>
-        <span className="mac-title">{title}</span>
-      </div>
-      <div className="mac-body">{children}</div>
+    <section id={id} className={`win win-section ${className ?? ""}`}>
+      <WindowBar title={title} />
+      <div className="win-body">{children}</div>
     </section>
   )
 }

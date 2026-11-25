@@ -32,7 +32,7 @@ export function AboutSection() {
 
       <Prompt path="~">cat education.txt</Prompt>
       <p className="term-out">
-        <span className="term-strong">B.Tech Statistics</span> <span className="term-accent">— 2023</span>
+        <span className="term-strong">B.Tech Statistics</span> <span className="term-date">— 2023</span>
         <br />
         Federal University of Technology Minna, Niger State.
       </p>

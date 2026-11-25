@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react"
 import { TerminalBoot } from "@/components/terminal-boot"
 import { Typed, ScrollTyped } from "@/components/typed"
-import { MacWindow } from "@/components/mac-window"
+import { MacWindow, WindowBar } from "@/components/mac-window"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { AboutSection } from "@/components/about-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { ContactSection } from "@/components/contact-section"
@@ -86,7 +87,9 @@ export default function Home() {
 
       <header>
         <div className="container header-inner">
-          <div className="logo">Genesis.Habila</div>
+          <a href="#" className="logo" aria-label="Genesis Habila — back to top">
+            Genesis<span className="logo-dot">.</span>Habila
+          </a>
           <nav id="primary-nav" className={`nav-links ${menuOpen ? "open" : ""}`}>
             <a href="#about" onClick={() => setMenuOpen(false)}>
               ABOUT
@@ -101,16 +104,19 @@ export default function Home() {
               CONTACT
             </a>
           </nav>
-          <div className="system-status">SYS_UP: 24:12:05:08 | CPU: 12%</div>
-          <button
-            className="nav-toggle"
-            aria-label="Toggle navigation menu"
-            aria-expanded={menuOpen}
-            aria-controls="primary-nav"
-            onClick={() => setMenuOpen((v) => !v)}
-          >
-            {menuOpen ? "[ close ]" : "[ menu ]"}
-          </button>
+          <div className="header-tools">
+            <div className="system-status">SYS_UP: 24:12:05:08 | CPU: 12%</div>
+            <ThemeToggle />
+            <button
+              className="nav-toggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded={menuOpen}
+              aria-controls="primary-nav"
+              onClick={() => setMenuOpen((v) => !v)}
+            >
+              {menuOpen ? "[ close ]" : "[ menu ]"}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -141,21 +147,8 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="window-frame">
-            <div className="window-header">
-              <span>genesis_habila.jpg</span>
-              <div className="window-controls">
-                <button className="window-btn" aria-label="Minimize">
-                  <span className="minimize-icon"></span>
-                </button>
-                <button className="window-btn" aria-label="Maximize">
-                  <span className="maximize-icon"></span>
-                </button>
-                <button className="window-btn window-close" aria-label="Close">
-                  <span className="close-icon"></span>
-                </button>
-              </div>
-            </div>
+          <div className="win win-hero">
+            <WindowBar title="genesis_habila.jpg" />
             <img src="/dp.JPG" alt="Genesis Habila" className="hero-image" />
           </div>
         </section>
@@ -190,7 +183,7 @@ export default function Home() {
       </div>
 
       {/* Marquee */}
-      <div className="marquee-container">
+      <div className="marquee-container" aria-hidden="true">
         <div className="marquee-text">
           <span>AVAILABLE FOR FREELANCE • </span>
           <span>HIRE THE SYSTEM • </span>
@@ -246,40 +239,25 @@ export default function Home() {
         <ContactSection />
 
         {/* Footer */}
-        <footer>
+        <footer className="site-footer">
           <div className="footer-logo">
-            <p style={{ color: "var(--accent)", fontSize: "0.8rem", marginBottom: "10px" }}>END_OF_PAGE</p>
+            <p className="footer-eyebrow">END_OF_PAGE</p>
             <h2>
               GENESIS
               <br />
               HABILA©
             </h2>
           </div>
-          <div style={{ textAlign: "right" }}>
-            <div style={{ marginBottom: "20px" }}>
-              <a
-                href="https://github.com/GenesisNorth"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}
-              >
+          <div className="footer-right">
+            <nav className="footer-links" aria-label="Social links">
+              <a href="https://github.com/GenesisNorth" target="_blank" rel="noopener noreferrer">
                 GITHUB
               </a>
-              <a
-                href="https://linkedin.com/in/habilagenesis"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}
-              >
+              <a href="https://linkedin.com/in/habilagenesis" target="_blank" rel="noopener noreferrer">
                 LINKEDIN
               </a>
-              <a
-                href="mailto:habilagenesis@gmail.com"
-                style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}
-              >
-                EMAIL
-              </a>
-            </div>
+              <a href="mailto:habilagenesis@gmail.com">EMAIL</a>
+            </nav>
             <p className="copyright">FULL-STACK SOFTWARE ENGINEER · AI &amp; BLOCKCHAIN · BUILT FROM THE TERMINAL.</p>
           </div>
         </footer>

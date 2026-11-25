@@ -1,3 +1,4 @@
+import { WindowBar } from "@/components/mac-window"
 import { ScrollTyped } from "@/components/scroll-typed"
 
 type ProjectLink = { label: string; href: string }
@@ -95,21 +96,8 @@ export function ProjectsSection() {
   return (
     <div className="portfolio-grid">
       {PROJECTS.map((p) => (
-        <article className="project-card" key={p.slug}>
-          <div className="window-header">
-            <span>{p.window}</span>
-            <div className="window-controls" aria-hidden="true">
-              <button className="window-btn" tabIndex={-1} aria-label="Minimize">
-                <span className="minimize-icon" />
-              </button>
-              <button className="window-btn" tabIndex={-1} aria-label="Maximize">
-                <span className="maximize-icon" />
-              </button>
-              <button className="window-btn window-close" tabIndex={-1} aria-label="Close">
-                <span className="close-icon" />
-              </button>
-            </div>
-          </div>
+        <article className="win project-card" key={p.slug}>
+          <WindowBar title={p.window} />
 
           <div className="project-preview">
             <div className="preview-cmd">

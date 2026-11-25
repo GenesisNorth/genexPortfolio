@@ -1,20 +1,21 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Space_Mono, Syne } from "next/font/google"
+import { Space_Mono, Syne } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
-const _spaceMono = Space_Mono({
+const spaceMono = Space_Mono({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-space-mono",
+  display: "swap",
 })
-const _syne = Syne({
+const syne = Syne({
   weight: ["400", "700", "800"],
   subsets: ["latin"],
   variable: "--font-syne",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
@@ -37,9 +38,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${_spaceMono.variable} ${_syne.variable} font-sans antialiased`}>
-        {children}
+    // Font variables live on <html> so :root tokens can reference them.
+    <html lang="en" className={`${spaceMono.variable} ${syne.variable}`} suppressHydrationWarning>
+      <body className="antialiased">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
