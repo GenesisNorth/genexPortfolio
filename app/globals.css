@@ -36,6 +36,7 @@
   --node-glow: 0 0 10px rgb(0 224 90 / 0.45);
   --scanline: rgb(0 0 0 / 0.1);
   --rgb-fringe: 0.6;
+  --shot-dim: 0.82; /* tame bright white screenshots on the dark theme */
 
   --shadow-retro: 4px 4px 0 var(--accent);
 
@@ -73,6 +74,7 @@
   --node-glow: 0 0 0 3px rgb(0 122 52 / 0.12);
   --scanline: rgb(0 0 0 / 0.025);
   --rgb-fringe: 0;
+  --shot-dim: 1;
 }
 
 /* Map shadcn/Tailwind semantic colors onto the retro tokens so any ui/*
@@ -511,6 +513,8 @@ section[id] {
 }
 
 .project-card.win {
+  display: flex;
+  flex-direction: column;
   border-color: var(--border);
   background: var(--surface);
   box-shadow: none;
@@ -537,10 +541,98 @@ section[id] {
   border-bottom-color: var(--accent);
 }
 
-/* Terminal-style project preview panel (stands in for a screenshot) */
+/* ---------- Filter bar: `ls --filter web` ---------- */
+.proj-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin: -20px 0 30px;
+  font-size: 0.85rem;
+}
+
+.proj-filter-cmd {
+  margin-right: 4px;
+}
+
+.proj-filter-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.proj-filter-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.proj-filter-btn[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.proj-count {
+  margin-left: auto;
+}
+
+.proj-empty {
+  grid-column: 1 / -1;
+}
+
+/* ---------- Screenshot panel ---------- */
+.project-shot {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 2px solid var(--border);
+  background: var(--surface-term);
+}
+
+.project-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  filter: grayscale(100%) contrast(110%) brightness(var(--shot-dim));
+  transition:
+    filter 0.5s,
+    transform 0.6s;
+}
+
+.project-card:hover .project-shot img,
+.project-card:focus-within .project-shot img {
+  filter: none;
+  transform: scale(1.03);
+}
+
+.project-shot-cat {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 3px 8px;
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: var(--surface-term);
+  color: var(--amber);
+  border: 1px solid var(--border);
+}
+
+/* Terminal-style project preview panel (fallback when there's no screenshot) */
 .project-preview {
   position: relative;
-  height: 200px;
+  aspect-ratio: 16 / 10;
   border-bottom: 2px solid var(--border);
   padding: 16px 18px;
   display: flex;
@@ -586,13 +678,46 @@ section[id] {
 
 .project-info {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-bottom: 10px;
+}
+
+.project-status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-live {
+  color: var(--accent);
+}
+
+.status-dev {
+  color: var(--amber);
+}
+
+.status-archived {
+  color: var(--text-muted);
 }
 
 .project-tag {
   font-size: 0.7rem;
-  color: var(--accent);
-  margin-bottom: 10px;
-  display: block;
+  color: var(--text-muted);
+}
+
+.project-desc {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
 .project-title {
@@ -605,8 +730,26 @@ section[id] {
 .project-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px 16px;
-  margin-top: 14px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.project-visit {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding: 4px 2px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.project-visit:hover {
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 .project-link {
@@ -617,6 +760,59 @@ section[id] {
 
 .project-link:hover {
   text-decoration: underline;
+}
+
+/* ---------- ~/repos window: `ls -la` rows ---------- */
+.repo-list {
+  list-style: none;
+  margin: 10px 0 6px;
+  padding: 0;
+}
+
+.repo-row {
+  display: grid;
+  grid-template-columns: auto 90px 70px minmax(160px, 220px) 1fr;
+  gap: 4px 18px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 0.82rem;
+}
+
+.repo-row:last-child {
+  border-bottom: none;
+}
+
+.repo-perm {
+  color: var(--text-muted);
+}
+
+.repo-lang {
+  color: var(--cyan);
+}
+
+.repo-date {
+  color: var(--amber);
+}
+
+.repo-name {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.repo-name:hover {
+  text-decoration: underline;
+}
+
+.repo-desc {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.repo-more {
+  margin-top: 12px;
 }
 
 /* ---------- Marquee ---------- */
@@ -1061,6 +1257,11 @@ section[id] {
     transition: none;
     transform: none;
   }
+  .project-shot img,
+  .project-card:hover .project-shot img {
+    transition: none;
+    transform: none;
+  }
   .scroll-to-top {
     animation: none;
   }
@@ -1090,6 +1291,15 @@ section[id] {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+  }
+  .repo-row {
+    grid-template-columns: 90px 70px 1fr;
+  }
+  .repo-perm {
+    display: none;
+  }
+  .repo-desc {
+    grid-column: 1 / -1;
   }
   .stats-bar {
     padding: 25px;
@@ -1252,6 +1462,33 @@ section[id] {
   .portfolio-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .proj-filter {
+    margin-top: -10px;
+  }
+
+  .proj-filter-cmd {
+    flex-basis: 100%;
+  }
+
+  .proj-count {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .repo-row {
+    grid-template-columns: auto auto 1fr;
+    gap: 2px 12px;
+  }
+
+  .repo-perm {
+    display: none;
+  }
+
+  .repo-name,
+  .repo-desc {
+    grid-column: 1 / -1;
   }
 
   .project-card:hover,

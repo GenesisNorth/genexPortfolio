@@ -47,7 +47,7 @@ const ROLES: Role[] = [
     company: "Niteon",
     dates: "06/2025 – 12/2025",
     location: "Colorado, USA",
-    website: "https://niteonhq.com",
+    website: "https://niteon.co",
     summary: "Leading backend development and AI integration for e-commerce solutions.",
     bullets: [
       "Collaborated with design and backend teams to refine UI workflows and data flows",
@@ -101,7 +101,7 @@ const ROLES: Role[] = [
     company: "Africartz",
     dates: "11/2024 – 05/2025",
     location: "Lagos, Nigeria",
-    website: "https://www.africartz.com",
+    website: "https://play.google.com/store/apps/details?id=com.africartz.bookings",
     summary: "Developing cross-platform mobile applications for e-commerce.",
     bullets: [
       "Developed the Africartz mobile application for cross-platform usage",
